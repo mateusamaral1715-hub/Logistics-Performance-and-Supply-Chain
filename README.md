@@ -63,7 +63,9 @@ The project implements a robust **Star Schema** to handle complex supply chain r
 ---
 
 ## 👨‍💻 About the Author
+
 **Mateus - Business & Data Analyst**
+**[LinkedIn Profile](https://www.linkedin.com/in/mateus-amaral-895392293/)**
 * **Focus:** SQL Architecture, Supply Chain BI, and Process Automation.
 * **Education:** Bachelor of Business Administration (**NFQ Level 8** equivalent).
 * **Status:** Ready to relocate to Ireland (Dublin/Cork/Galway) under the **CSEP**.
