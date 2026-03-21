@@ -56,6 +56,7 @@ The project implements a robust **Star Schema** to handle complex supply chain r
 ---
 
 ## 🏗️ How to Use This Repository
+
 1. **Setup Database:** Ensure MySQL/WampServer is running. Execute the SQL script in `/sql` to create the schema.
 2. **Run Python Script:** Execute `generate_logistics_data.py` to populate the DB.
 3. **Open Dashboard:** Connect the `.pbix` file to your local MySQL instance.
