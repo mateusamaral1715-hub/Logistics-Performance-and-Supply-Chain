@@ -1,65 +1,63 @@
-# 🚛 Logistics & Supply Chain Performance: End-to-End Data Pipeline
+# 🇮🇪 End-to-End Logistics & Supply Chain Pipeline: Python, SQL & Power BI
 
-This repository showcases a complete Data Analytics workflow designed for executive-level decision-making. The project focuses on identifying bottlenecks by shipping mode, warehouse location, and supplier performance to reduce delays in a complex supply chain.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://www.mysql.com/)
+[![Power BI](https://img.shields.io/badge/Power_BI-Supply_Chain-yellow.svg)](https://powerbi.microsoft.com/)
 
-## 🎯 Business Problem
-How to optimize operations and reduce delays in a supply chain handling **30,000+ yearly shipments**? This dashboard provides actionable insights to track efficiency and improve overall delivery performance.
+## 📌 Executive Summary
+This project simulates a high-scale **Irish Logistics Operation**, focusing on the supply chain flow between major hubs: **Dublin Port, Shannon Airport, Galway Hub, and Cork Harbour**.
+
+To mimic a real-world enterprise environment, I bypassed static spreadsheets and built a dynamic pipeline: **Python (Data Generation) ➡️ MySQL (Relational Storage) ➡️ Power BI (Strategic Analytics)**. I engineered over 30,000 shipment records to analyze delivery performance, freight costs, and supplier reliability.
 
 ---
 
-## ⚙️ Part 1: Data Engineering & Pipeline (Python & SQL)
-To simulate a real-world enterprise architecture, I bypassed static spreadsheets completely and built a direct database connection.
+## 🚀 Corporate Pipeline & Impact
+* **Relational Architecture:** Transitioned from flat-file processing to a structured **MySQL Database** (hosted via WampServer), mimicking a professional data warehouse environment.
+* **Logistics Optimization:** Simulated and analyzed key Supply Chain KPIs: **On-Time Delivery (OTD) Rate**, **Freight Cost per KG**, and **Delayed Shipment Trends**.
+* **Irish Infrastructure Focus:** Strategic mapping of logistics performance across Ireland's key ports and airports.
 
-* **Data Generation:** Developed a Python script to generate over 30,000 rows of synthetic logistics data.
+---
 
-<p align="center">
+## 🛠️ The Tech Stack
+### 1. Data Engineering (Python & SQL)
+* **Synthetic Generation:** Developed a Python script to generate realistic logistics data, including Incoterms, shipping modes (Sea, Road, Air), and weight-based pricing.
+ <p align="center">
   <img height="400" alt="Python Script Snippet" src="https://github.com/user-attachments/assets/90993b14-1052-4b32-ac1d-b5420ecfc609" />
 </p>
 
-* **Database Integration:** Ingested the generated data directly into a **MySQL database** (hosted locally via **WampServer**).
-
-<p align="center">
+* **Database Integration:** Automated data ingestion into a **MySQL Database**, utilizing SQL scripts to create optimized tables and primary/foreign key relationships.
+  <p align="center">
   <img height="400" alt="MySQL Database Integration" src="https://github.com/user-attachments/assets/818d20f2-91a7-49cd-81b5-0b9d01187811" />
 </p>
 
-* **Corporate Pipeline:** Connected Power BI directly to this SQL server, mimicking a true corporate data environment.
+### 2. Data Modeling & Star Schema
+* **Fact_Shipments:** Centralized transactional data (~30,000 rows).
+* **Dimensions:** Built relational links to `Dim_Suppliers`, `Dim_Products`, and `Dim_Warehouses` for multi-dimensional analysis.
+
+### 3. Business Intelligence (Power BI)
+* **Executive Dashboard:** Designed a high-impact interface to monitor delayed shipments and supplier performance.
+* **Advanced DAX:** Calculated metrics for **Freight Cost (inc. VAT)** and **On-Time Delivery Rate %**.
 
 ---
 
-## 💡 Part 2: Business Intelligence & UI/UX (Power BI)
-The SQL data was transformed into a highly interactive, senior-level dashboard:
+## 📊 Project Showcase
+ 👉 **[Click Here to Open the Live Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNjE3MDdkZjQtOWZmYS00OWM1LTkwOGItYjQ3NDk3MDdiZWExIiwidCI6IjUxYmEzOWRiLWRkYjAtNDQ3YS04MTU0LTgzNGEwYTZmZDJlOCJ9)**
 
-* **Advanced Data Modeling:** Implemented a **Star Schema** architecture with a custom Calendar table to handle specific business logic (including bank holidays).
-* **DAX Mastery:** Created complex measures, including moving averages for trend analysis and dynamic KPI tracking like the **On-Time Delivery (OTD) Rate %**.
-* **Senior UI/UX Design:** Engineered using the **"Z-Pattern"** for visual hierarchy, ensuring minimal cognitive load (utilizing off-black typography and strategic negative space), alongside impactful Conditional Formatting.
-* **Advanced Interactivity:** Features cross-filtering across all visuals, Custom Dropdown Slicers (Year/Incoterm), and a dynamic **"Clear Filters"** button engineered using Power BI Bookmarks.
-
----
-
-## 🛠️ Tech Stack
-* **Languages:** Python, SQL, DAX
-* **Tools & Infrastructure:** Power BI, MySQL Workbench, WampServer
-
----
-
-## 🚀 How to Use This Repository
-
-1. **Setup the Database:** Ensure WampServer (or your preferred local server) is running with MySQL.
-2. **Run the Python Script:** Execute the data generation script to populate the MySQL database with the 30,000+ shipment records.
-3. **Open the Dashboard:** Open the `.pbix` file in Power BI Desktop and refresh the data connections to your local SQL server.
-4. **Interact with the Project:**
-   * 👉 **[Click Here to Open the Live Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNjE3MDdkZjQtOWZmYS00OWM1LTkwOGItYjQ3NDk3MDdiZWExIiwidCI6IjUxYmEzOWRiLWRkYjAtNDQ3YS04MTU0LTgzNGEwYTZmZDJlOCJ9)**
-
-<p align="center">
+ <p align="center">
   <img height="400" alt="Logistics Dashboard Preview" src="https://github.com/user-attachments/assets/094b8bdf-34cd-438f-841b-26318c4a9cdb" />
 </p>
 
 ---
 
-## 📫 Professional Contact
+## 🏗️ How to Use This Repository
+1. **Setup Database:** Ensure MySQL/WampServer is running. Execute the SQL script in `/sql` to create the schema.
+2. **Run Python Script:** Execute `generate_logistics_data.py` to populate the DB.
+3. **Open Dashboard:** Connect the `.pbix` file to your local MySQL instance.
 
-**Mateus Amaral da Costa**
-* **Role:** Business Intelligence Analyst | Business Administrator
-* **Location:** Catalão, Brazil (Available for Relocation/Remote roles in Ireland)
-* **LinkedIn:** [Connect with me on LinkedIn](https://www.linkedin.com/in/mateus-amaral-895392293)
-* **Email:** [mateus.amaral1715@gmail.com](mailto:mateus.amaral1715@gmail.com)
+---
+
+## 👨‍💻 About the Author
+**Mateus - Business & Data Analyst**
+* **Focus:** SQL Architecture, Supply Chain BI, and Process Automation.
+* **Education:** Bachelor of Business Administration (**NFQ Level 8** equivalent).
+* **Status:** Ready to relocate to Ireland (Dublin/Cork/Galway) under the **CSEP**.
