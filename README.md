@@ -31,9 +31,15 @@ To mimic a real-world enterprise environment, I bypassed static spreadsheets and
 </p>
 
 ### 2. Data Modeling & Star Schema
-* **Fact_Shipments:** Centralized transactional data (~30,000 rows).
-* **Dimensions:** Built relational links to `Dim_Suppliers`, `Dim_Products`, and `Dim_Warehouses` for multi-dimensional analysis.
+The project implements a robust **Star Schema** to handle complex supply chain relationships, ensuring high-performance analytical queries:
 
+* **fact_shipments:** The central fact table containing ~30,000 logistics transactions, including arrival dates, Incoterms, and costs.
+* **dim_suppliers:** Relational data for vendors, including performance ratings and country of origin.
+* **dim_products:** Product catalog featuring unit weights (KG), utilized for complex weight-based freight calculations.
+* **dim_warehouses:** Strategic mapping of Irish logistics hubs, including **Eircodes** and storage capacities for Dublin, Cork, and Shannon.
+* **dim_calendar:** A comprehensive time intelligence table supporting OTD (On-Time Delivery) trend analysis.
+* **_Measures:** Centralized DAX repository housing advanced calculations like **VAT-inclusive Freight Costs (23% Irish Standard)** and **OTD Rate %**.
+  
 ### 3. Business Intelligence (Power BI)
 * **Executive Dashboard:** Designed a high-impact interface to monitor delayed shipments and supplier performance.
 * **Advanced DAX:** Calculated metrics for **Freight Cost (inc. VAT)** and **On-Time Delivery Rate %**.
