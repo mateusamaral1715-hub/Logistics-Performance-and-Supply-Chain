@@ -72,4 +72,4 @@ Designed for high-performance analytical queries and executive reporting:
 * **Local Compliance:** Applied integration of Irish VAT (23%) and Eircode systems.
 
 ---
-**Engineered by [Mateus Amaral](https://www.linkedin.com/in/mateus-amaral-895392293)** • *Business Partner Analyst | FinOps & AI Specialist | Relocating to Ireland 🇮🇪*
+**Engineered by [Mateus Amaral](https://www.linkedin.com/in/mateus-amaral-895392293)** • *Business Analyst | FinOps & AI Specialist | Relocating to Ireland 🇮🇪*
